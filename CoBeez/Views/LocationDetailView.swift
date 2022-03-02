@@ -24,7 +24,7 @@ struct LocationDetailView: View {
                     titleSection
                     Divider()
                     descriptionSection
-                    
+                    Spacer()
                     timeAndButton
                     
                 }
@@ -54,7 +54,7 @@ extension LocationDetailView {
                     .clipped()
             }
         }
-        .frame(height: 550)
+        .frame(height: 500)
         .tabViewStyle(PageTabViewStyle())
         
     }
