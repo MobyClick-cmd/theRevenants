@@ -16,6 +16,7 @@ struct LocationDetailView: View {
     let location: Location
     
     var body: some View {
+        VStack {
         ScrollView{
             VStack{
                 imageSection
@@ -24,18 +25,21 @@ struct LocationDetailView: View {
                     titleSection
                     Divider()
                     descriptionSection
-                    Spacer()
-                    timeAndButton
-                    
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
                 .background(.thickMaterial)
                 .cornerRadius(20)
                 .offset(y: -20)
+                
+
             }
         }
         .ignoresSafeArea()
+
+            timeAndButton
+                .padding()
+        }
         .background(.thickMaterial)
         .overlay(backButton, alignment: .topTrailing)
     }
@@ -54,7 +58,7 @@ extension LocationDetailView {
                     .clipped()
             }
         }
-        .frame(height: 500)
+        .frame(height: 400)
         .tabViewStyle(PageTabViewStyle())
         
     }

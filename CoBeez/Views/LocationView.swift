@@ -12,7 +12,7 @@ struct LocationView: View {
     
     @EnvironmentObject private var vm: LocationsViewModel
     
-    @AppStorage("firstTime") var firstTime: Bool = true
+//    @AppStorage("firstTime") var firstTime: Bool = true
     
     var body: some View {
         ZStack{
@@ -27,7 +27,7 @@ struct LocationView: View {
                 
                 
             }
-            .sheet(isPresented: $firstTime, onDismiss: {firstTime = false}, content: {OnboardingView()})
+//            .sheet(isPresented: $firstTime, onDismiss: {firstTime = false}, content: {OnboardingView()})
         }
         .sheet(item: $vm.sheetLocation, onDismiss: nil) { location in
             LocationDetailView(location: location)
